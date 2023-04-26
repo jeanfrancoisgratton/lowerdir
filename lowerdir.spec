@@ -5,25 +5,24 @@
 %define _version 0.100
 %define _rel 0
 %define _arch x86_64
-%define _binaryname lowerdir
 
 Name:       lowerdir
 Version:    %{_version}
 Release:    %{_rel}
 Summary:    lowerdir
 
-Group:      Utils
+Group:      virtualMachines/orchestration
 License:    GPL2.0
 URL:        https://github.com/jeanfrancoisgratton/lowerdir
 
 Source0:    %{name}-%{_version}.tar.gz
 BuildArchitectures: x86_64
-#BuildRequires: gcc
-#Requires: sudo
-#Obsoletes: vmman1 > 1.140
+BuildRequires: libvirt-devel,wget,gcc
+Requires: libvirt-devel,libvirt,virt-clone,sudo,postgresql-contrib
+
 
 %description
-Batch file rename tool
+GoLang-based libvirt client
 
 %prep
 #%setup -q
@@ -31,23 +30,24 @@ Batch file rename tool
 
 %build
 cd %{_sourcedir}/%{_name}-%{_version}/src
-#PATH=$PATH:/opt/go/bin go build -o %{_sourcedir}/%{_name} .
-PATH=$PATH:/opt/go/bin go build -o %{_sourcedir}/%{_binaryname} .
-#strip %{_sourcedir}/%{_name}
-strip %{_sourcedir}/%{_binaryname}
+PATH=$PATH:/opt/go/bin go build -o %{_sourcedir}/%{_name} .
+strip %{_sourcedir}/%{_name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %pre
+/usr/sbin/groupadd kvm 2> /dev/null
+/usr/sbin/groupadd -g 2500 devops 2> /dev/null
 exit 0
 
 %install
 #%{__mkdir_p} "$RPM_BUILD_ROOT%{_prefix}/bin"
-#install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{_name}
-#install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{_binaryname}
+#install -Dpm 0755 %{buildroot}/%{_name} "$RPM_BUILD_ROOT%{_prefix}/bin/"
+install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{name}
 
 %post
+strip %{_prefix}/bin/%{name}
 
 %preun
 
@@ -55,7 +55,7 @@ exit 0
 
 %files
 %defattr(-,root,root,-)
-%{_bindir}/%{_binaryname}
+%{_bindir}/%{name}
 
 
 %changelog
