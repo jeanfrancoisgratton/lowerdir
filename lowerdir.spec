@@ -2,8 +2,8 @@
 %define _build_id_links none
 %define _name   lowerdir
 %define _prefix /opt
-%define _version 0.100
-%define _rel 0
+%define _version 1.000
+%define _rel 1
 %define _arch x86_64
 
 Name:       lowerdir
@@ -61,8 +61,3 @@ strip %{_prefix}/bin/%{name}
 %changelog
 * Wed Apr 26 2023 builder <builder@famillegratton.net> 0.100-0
 - new package built with tito
-
-* Wed Apr 26 2023 builder <builder@famillegratton.net> 0.100-0
-- new package built with tito
-
-

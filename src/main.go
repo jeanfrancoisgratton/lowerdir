@@ -10,6 +10,14 @@ import (
 	"strings"
 )
 
+/*
+	VERSION HISTORY
+
+version			date			comments
+-------			----			--------
+1.000			2023.04.26		release
+0.100			2023.04.26		initial working version
+*/
 func main() {
 	a := len(os.Args[1:])
 	directory := "."
