@@ -56,7 +56,7 @@ exit 0
 %files
 %defattr(-,root,root,-)
 #%{_bindir}/%{name}
-%{_bindir}/%{binaryname}
+%{_bindir}/%{_binaryname}
 
 
 %changelog
