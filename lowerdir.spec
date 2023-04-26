@@ -44,8 +44,8 @@ exit 0
 
 %install
 #%{__mkdir_p} "$RPM_BUILD_ROOT%{_prefix}/bin"
-#install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{name}
-#install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{binaryname}
+#install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{_name}
+#install -Dpm 0755 %{_sourcedir}/%{name} %{buildroot}%{_bindir}/%{_binaryname}
 
 %post
 
@@ -55,11 +55,7 @@ exit 0
 
 %files
 %defattr(-,root,root,-)
-#%{_bindir}/%{name}
 %{_bindir}/%{_binaryname}
 
 
 %changelog
-* Wed Apr 26 2023 builder <builder@famillegratton.net> 0.100-0
-- new package built with tito
-
