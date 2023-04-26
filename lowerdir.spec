@@ -17,8 +17,8 @@ URL:        https://github.com/jeanfrancoisgratton/lowerdir
 
 Source0:    %{name}-%{_version}.tar.gz
 BuildArchitectures: x86_64
-BuildRequires: libvirt-devel,wget,gcc
-Requires: libvirt-devel,libvirt,virt-clone,sudo,postgresql-contrib
+#BuildRequires: libvirt-devel,wget,gcc
+#Requires: libvirt-devel,libvirt,virt-clone,sudo,postgresql-contrib
 
 
 %description
