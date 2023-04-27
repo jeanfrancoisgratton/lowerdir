@@ -2,7 +2,7 @@
 %define _build_id_links none
 %define _name   lowerdir
 %define _prefix /opt
-%define _version 1.01.00
+%define _version 1.10.00
 %define _rel 1
 %define _arch x86_64
 

@@ -10,13 +10,14 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 
-var version = "1.01.00 (2023.04.27)"
+var version = "1.10.00 (2023.04.27), J.F.Gratton <jean-francois@famillegratton.net>"
 var verboseMode = false
 
 var rootCmd = &cobra.Command{
-	Use:     "lowerdir",
+	Use:     "lowerdir [directory]",
 	Version: version,
 	Short:   "Batch file renaming tool to lowercase",
+	Long:    "If no directory is specified, the current directory will be used.",
 	Run: func(cmd *cobra.Command, args []string) {
 		var target string
 		if len(args) == 0 {

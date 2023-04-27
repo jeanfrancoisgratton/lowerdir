@@ -1,5 +1,5 @@
 Package: lowerdir
-Version: 1.01.00
+Version: 1.10.00
 Architecture: amd64
 Maintainer: J.F.Gratton <nexus@famillegratton.net>
 Description: Batch rename files in directory
