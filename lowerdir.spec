@@ -59,6 +59,9 @@ strip %{_prefix}/bin/%{name}
 
 
 %changelog
+* Thu Apr 27 2023 builder <builder@famillegratton.net> 1.01.00-1
+- New release, cobra-enabled (jean-francois@famillegratton.net)
+
 * Wed Apr 26 2023 builder <builder@famillegratton.net> 1.000-1
 - Release (jean-francois@famillegratton.net)
 - final rpmspec fix (builder@famillegratton.net)
