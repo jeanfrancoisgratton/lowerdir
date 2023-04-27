@@ -2,7 +2,7 @@
 %define _build_id_links none
 %define _name   lowerdir
 %define _prefix /opt
-%define _version 1.000
+%define _version 1.01.00
 %define _rel 1
 %define _arch x86_64
 
@@ -11,7 +11,7 @@ Version:    %{_version}
 Release:    %{_rel}
 Summary:    lowerdir
 
-Group:      virtualMachines/orchestration
+Group:      Administration tools
 License:    GPL2.0
 URL:        https://github.com/jeanfrancoisgratton/lowerdir
 
@@ -22,7 +22,7 @@ BuildArchitectures: x86_64
 
 
 %description
-GoLang-based libvirt client
+Filesystem utilities
 
 %prep
 #%setup -q

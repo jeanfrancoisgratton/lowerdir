@@ -1,4 +1,5 @@
-- [ ] nothing so far : it's a quick-and-dirty one :-)
+- [ ] how about $HOME
+- [ ] how about other "protected dirs"
 
 
 <br><br><br>
