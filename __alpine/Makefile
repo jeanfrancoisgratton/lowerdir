@@ -5,7 +5,6 @@ all:
 prepare:
 	sudo /opt/bin/install_golang.sh 1.19.8 amd64
 	sudo apk update
-	sudo apk add --no-cache ronn
 
 install:
 	test -d $(DESTDIR)$(PREFIX)/bin || mkdir -p $(DESTDIR)$(PREFIX)/bin
