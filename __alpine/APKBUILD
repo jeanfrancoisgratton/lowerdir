@@ -2,7 +2,7 @@
 # PACKAGER: APK Builder <builder@famillegratton.net>
 pkgname=lowerdir
 pkgver=1.10.00
-pkgrel=1
+pkgrel=2
 pkgdir=/data/packages
 builddir="$startdir/src/BUILD"
 pkgdesc="Filesystem tool to rename files"
@@ -17,10 +17,9 @@ binaryname="lowerdir"
 build() {
 	pwd
 	mkdir -p "$builddir" && cd "$builddir"/.. && rm -rf BUILD && cp -R "$startdir"/../src . && mv src BUILD
-    cd "$builddir"
+	cd "$builddir"
     make -f "$startdir"/Makefile prepare
     CGO_ENABLED=0 go build -o "$binaryname".exe .
-
 }
 
 package() {

@@ -17,7 +17,8 @@ var rootCmd = &cobra.Command{
 	Use:     "lowerdir [directory]",
 	Version: version,
 	Short:   "Batch file renaming tool to lowercase",
-	Long:    "If no directory is specified, the current directory will be used.",
+	Long: `Rename files in named directory in parameter.
+If no directory is specified, the current directory will be used.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		var target string
 		if len(args) == 0 {

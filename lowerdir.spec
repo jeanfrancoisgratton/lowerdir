@@ -3,7 +3,7 @@
 %define _name   lowerdir
 %define _prefix /opt
 %define _version 1.10.00
-%define _rel 1
+%define _rel 2
 %define _arch x86_64
 
 Name:       lowerdir
@@ -37,9 +37,6 @@ strip %{_sourcedir}/%{_name}
 rm -rf $RPM_BUILD_ROOT
 
 %pre
-/usr/sbin/groupadd kvm 2> /dev/null
-/usr/sbin/groupadd -g 2500 devops 2> /dev/null
-exit 0
 
 %install
 #%{__mkdir_p} "$RPM_BUILD_ROOT%{_prefix}/bin"
