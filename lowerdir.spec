@@ -56,6 +56,11 @@ strip %{_prefix}/bin/%{name}
 
 
 %changelog
+* Fri Apr 28 2023 builder <builder@famillegratton.net> 1.10.00-2
+- Removed useless package (jean-francois@famillegratton.net)
+- repackaging (jean-francois@famillegratton.net)
+- interim commit to test apkbuilder (jean-francois@famillegratton.net)
+
 * Thu Apr 27 2023 builder <builder@famillegratton.net> 1.01.00-1
 - New release, cobra-enabled (jean-francois@famillegratton.net)
 
