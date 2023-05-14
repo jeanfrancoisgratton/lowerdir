@@ -2,8 +2,8 @@
 %define _build_id_links none
 %define _name   lowerdir
 %define _prefix /opt
-%define _version 1.10.00
-%define _rel 2
+%define _version 1.101
+%define _rel 1
 %define _arch x86_64
 
 Name:       lowerdir

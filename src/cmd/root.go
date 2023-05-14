@@ -1,4 +1,4 @@
-// Copyright S 2022 Jean-Francois Gratton <jean-francois@famillegratton.net>
+// Copyright S 2023 Jean-Francois Gratton <jean-francois@famillegratton.net>
 
 package cmd
 
@@ -10,7 +10,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 
-var version = "1.10.00 (2023.04.27), J.F.Gratton <jean-francois@famillegratton.net>"
+var version = "1.101 (2023.05.14), J.F.Gratton <jean-francois@famillegratton.net>"
 var verboseMode = false
 
 var rootCmd = &cobra.Command{

@@ -1,8 +1,8 @@
 # Maintainer: Jean-Francois Gratton <jean-francois@famillegratton.net>
 # PACKAGER: APK Builder <builder@famillegratton.net>
 pkgname=lowerdir
-pkgver=1.10.00
-pkgrel=2
+pkgver=1.101
+pkgrel=1
 pkgdir=/data/packages
 builddir="$startdir/src/BUILD"
 pkgdesc="Filesystem tool to rename files"
